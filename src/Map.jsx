@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css'
 import { Icon } from 'leaflet'
 function Map({latAndLong, location}) {
     const customIcon = new Icon({
-        iconUrl:'../public/images/icon-location.svg',
+        iconUrl:'/images/icon-location.svg',
         iconSize:[30, 40]
     })
   return <>
