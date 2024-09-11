@@ -35,7 +35,7 @@ function App() {
       <div className="input">
         <input placeholder='Type IP Address...' type="text" onChange={e=>setIp(e.target.value)}/>
         <button onClick={handleIp}>
-          <img src="public/images/icon-arrow.svg" alt="arrow" />
+          <img src="public/images/icon-arrow.svg" alt="arrow" width={10} height={10} />
         </button>
       </div>
       <Info ip={ip} location={location} timezone={timezone} isp={isp} isLoading={isLoading} />
