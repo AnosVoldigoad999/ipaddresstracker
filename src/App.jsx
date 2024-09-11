@@ -35,10 +35,11 @@ function App() {
       <div className="input">
         <input placeholder='Type IP Address...' type="text" onChange={e=>setIp(e.target.value)}/>
         <button onClick={handleIp}>
-          <img src="public/images/icon-arrow.svg" alt="arrow" width={10} height={10} />
+          <img src="public/images/icon-arrow.svg" alt="arrow" />
         </button>
       </div>
       <Info ip={ip} location={location} timezone={timezone} isp={isp} isLoading={isLoading} />
+      <img src="public/images/pattern-bg-mobile.png" alt="idk" />
       {(!isLoading && latAndLong.length<1)?<p style={{marginTop:"20vh"}}>Search to view Map...</p>:isLoading?<p style={{marginTop:"20vh"}}>Loading...</p>:<Map latAndLong={latAndLong} location={location} /> }
       {/*basically, if its not loading and the things needed for the map to work properly(latitude and longitude) arent available yet, ask the user to search, if the user is searching, show "loading..." and if the user aint searching and the necessary info is available, load up the map! */}
     </main>
