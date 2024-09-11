@@ -10,6 +10,26 @@ function App() {
   const [isp, setIsp] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [latAndLong, setLatandLong] = useState([])
+  useEffect(()=>{ //for the user to see their own info on page load
+    setIsLoading(true)
+    axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_W9e016P7fQqWixIaRWVnrwzV7eTzD&ipAddress=`).then(res=>{
+      const data = res.data
+      setIsLoading(false) //stop the "loading" sequence when data has been received
+      console.log(data) //to see what it returns
+      setIp(data.ip)
+      setLocation(`${data.location.region}, ${data.location.country}`)//location
+      setTimezone(`UTC ${data.location.timezone}`)//timezone
+      setIsp(data.isp)//isp
+      setLatandLong([data.location.lat, data.location.lng])//latitude and longitude for the map
+      console.log(latAndLong)//also to see what it returns
+      }).catch(error=>{
+        alert(error)//for the user
+        console.log(error)
+        setIsLoading(false)
+      })
+  }, [])
+
+
  function handleIp (){
   setIsLoading(true)
     axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_W9e016P7fQqWixIaRWVnrwzV7eTzD&ipAddress=${ip}`).then(res=>{
