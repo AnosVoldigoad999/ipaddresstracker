@@ -1,42 +1,137 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: rubik;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+:root{
+  --Very-Dark-gray: hsl(0, 0%, 17%);
+--Dark-Gray: hsl(0, 0%, 59%);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@font-face{
+  font-family: rubik;
+  src: url(../public/font/Rubik-VariableFont_wght.ttf);
+}
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.background{
+  width: 100vw;
+  height: 40vh;
+  /*border: 1px solid red;*/
+  position: absolute;
+  background-image: url(../public/images/pattern-bg-desktop.png);
+  z-index: -1;
+}
+
+.leaflet-container{
+  height: 60vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  min-height: 350px;
+}
+
+.input input{
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.input{
+  box-shadow: 0 0 3px var(--Very-Dark-gray);
+  border-radius: 10px;
+  width: 40vw;
+  display: flex;
+  background-color: white;
+  margin-top: 2vh;
+}
+h1{
+  color: white;
+  margin-top: 5vh;
+}
+.input button{
+  padding: 10px 10px;
+  background-color: var(--Very-Dark-gray);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+}
+
+.info{
+  display: flex;
+  width: 70vw;
+  height: 120px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 0 3px var(--Very-Dark-gray);
+  border-radius: 10px;
+  margin-top: 12vh;
+  position: relative;
+  z-index: 2;
+  font-size: 1.5vw;
+}
+
+.ip, .location, .timezone{
+  border-right: 1px solid var(--Very-Dark-gray);
+  width: 25%;
+  padding: 0 10px;
+}
+
+.isp{
+  width: 25%;
+  padding: 0 10px;
+}
+
+@media(max-width:784px){
+  .info{
+    font-size: 1.8vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media(max-width:600px){
+  .background{
+    background-color: url(../public/images/pattern-bg-mobile.png);
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .input{
+    width: 90vw;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .info{
+    flex-direction: column;
+    width: 90vw;
+    height: fit-content;
+    padding: 10px 30px;
+    margin-top: 1vh;
+    font-size: 1rem;
+    justify-content: space-between;
+  }
 
-.read-the-docs {
-  color: #888;
+  .ip, .location, .timezone, .isp{
+    border: none;
+   /* border: 1px solid red;*/
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .ip h5, .location h5, .timezone h5, .isp h5{
+    font-size: 0.7rem;
+    color: var(--Dark-Gray);
+    font-weight: light;
+  }
+
+  .info span{
+    font-weight: 600;
+  }
+
+  
 }
