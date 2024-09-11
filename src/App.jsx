@@ -39,7 +39,7 @@ function App() {
         </button>
       </div>
       <Info ip={ip} location={location} timezone={timezone} isp={isp} isLoading={isLoading} />
-      <img src="public/images/pattern-bg-mobile.png" alt="idk" />
+      <img src="/images/pattern-bg-mobile.png" alt="idk" />
       {(!isLoading && latAndLong.length<1)?<p style={{marginTop:"20vh"}}>Search to view Map...</p>:isLoading?<p style={{marginTop:"20vh"}}>Loading...</p>:<Map latAndLong={latAndLong} location={location} /> }
       {/*basically, if its not loading and the things needed for the map to work properly(latitude and longitude) arent available yet, ask the user to search, if the user is searching, show "loading..." and if the user aint searching and the necessary info is available, load up the map! */}
     </main>
