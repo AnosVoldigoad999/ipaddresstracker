@@ -12,7 +12,7 @@ function App() {
   const [latAndLong, setLatandLong] = useState([])
  function handleIp (){
   setIsLoading(true)
-    axios.get(`/api/v2/country,city?apiKey=at_W9e016P7fQqWixIaRWVnrwzV7eTzD&ipAddress=${ip}`).then(res=>{
+    axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=at_W9e016P7fQqWixIaRWVnrwzV7eTzD&ipAddress=${ip}`).then(res=>{
     const data = res.data
     setIsLoading(false) //stop the "loading" sequence when data has been received
     console.log(data) //to see what it returns
