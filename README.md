@@ -23,14 +23,15 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
+- View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Filter job listings based on the categories
+- See their own IP address on the map on the initial page load
+- Search for any IP addresses or domains and see the key information and location
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://job-listing-wheat.vercel.app/)
+- Live Site URL: [Add live site URL here](https://ipaddresstracker-delta.vercel.app/)
 
 ## My process
 
@@ -44,7 +45,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.uzaymah.vercel.app)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/AnosVoldigoad999)
-- Twitter - [@yourusername](https://www.twitter.com/Anos_Voldigoad4)
+- Website - [Uzaymah Oyedeji](https://www.uzaymah.vercel.app)
+- Frontend Mentor - [@AnosVoldigoad999](https://www.frontendmentor.io/profile/AnosVoldigoad999)
+- Twitter - [@Anos_Voldigoad4](https://www.twitter.com/Anos_Voldigoad4)
 
